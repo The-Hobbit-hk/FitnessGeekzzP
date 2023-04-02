@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dietworkout"
     tools:context=".WeightLoss">
 
     <ImageView
@@ -34,13 +35,15 @@
         android:id="@+id/diet"
         android:layout_width="175dp"
         android:layout_height="117dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="284dp"
+        android:backgroundTint="@color/Baby_Blue"
         android:text="Diet"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="italic"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,19 +53,18 @@
         android:layout_height="117dp"
         android:layout_marginTop="211dp"
         android:layout_marginBottom="232dp"
+        android:backgroundTint="@color/Baby_Blue"
         android:text="Workout"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="italic"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/diet" />
-
-
-
+        app:layout_constraintTop_toTopOf="@+id/diet"
+        app:layout_constraintVertical_bias="0.522" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
