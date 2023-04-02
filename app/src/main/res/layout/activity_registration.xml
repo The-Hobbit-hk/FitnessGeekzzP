@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/Baby_Blue"
     tools:context=".Registration">
 
 
@@ -28,7 +29,7 @@
         android:layout_marginStart="72dp"
         android:text="Fitnez"
         android:textAlignment="center"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/teal_700"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Geekz"
-        android:textColor="@color/teal_200"
+        android:textColor="@color/purple_700"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,6 +58,7 @@
         android:layout_height="wrap_content"
         android:hint="Name"
         android:textSize="20dp"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -98,6 +100,8 @@
         android:layout_height="wrap_content"
         android:text="Choose your Gender"
         android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,12 +115,7 @@
         android:paddingLeft="20dp"
         tools:ignore="MissingConstraints">
 
-
     </RadioGroup>
-
-
-
-
 
     <EditText
         android:id="@+id/pwd"
@@ -125,6 +124,7 @@
         android:hint="Password"
         android:textSize="20dp"
         android:inputType="textPassword"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -139,6 +139,7 @@
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textSize="20dp"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.806"
@@ -149,6 +150,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textSize="20dp"
+        android:background="@color/Navy_Blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
