@@ -25,13 +25,7 @@ public class WeightLoss extends AppCompatActivity {
         workout=findViewById(R.id.workout);
         home=findViewById(R.id.home);
 
-        workout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(WeightLoss.this,DaysOp.class);
-                startActivity(intent);
-            }
-        });
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
