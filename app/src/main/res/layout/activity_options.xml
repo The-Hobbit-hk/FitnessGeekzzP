@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Options"
-    android:background="@drawable/db">
+    android:background="@drawable/spinner">
 
     <ImageView
         android:id="@+id/imageView"
@@ -15,23 +15,22 @@
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/btnbmi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnbmi"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="212dp"
         android:backgroundTint="@color/Baby_Blue"
         android:text="BMI"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
