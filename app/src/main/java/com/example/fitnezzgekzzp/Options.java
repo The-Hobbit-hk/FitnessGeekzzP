@@ -35,7 +35,7 @@ public class Options extends AppCompatActivity {
         btnloss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Options.this,WeightLoss.class);
+                Intent intent=new Intent(Options.this,WeightGain.class);
                 startActivity(intent);
             }
         });

@@ -29,7 +29,7 @@
         android:textAllCaps="true"
         android:textColor="#212121"
         android:textSize="26sp"
-        android:textStyle="bold||italic" />
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
