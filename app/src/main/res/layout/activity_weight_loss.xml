@@ -51,8 +51,6 @@
         android:id="@+id/workout"
         android:layout_width="175dp"
         android:layout_height="117dp"
-        android:layout_marginTop="211dp"
-        android:layout_marginBottom="232dp"
         android:backgroundTint="@color/Baby_Blue"
         android:text="Workout"
         android:textAlignment="center"
@@ -63,8 +61,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/diet"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintTop_toBottomOf="@+id/diet"
+        app:layout_constraintVertical_bias="0.352" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

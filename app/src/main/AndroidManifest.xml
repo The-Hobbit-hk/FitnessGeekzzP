@@ -8,11 +8,36 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnezzGekzzP"
         tools:targetApi="31">
+        <activity
+            android:name=".DaysOp"
+            android:exported="false" />
+        <activity
+            android:name=".saturday"
+            android:exported="false" />
+        <activity
+            android:name=".Friday"
+            android:exported="false" />
+        <activity
+            android:name=".thursday"
+            android:exported="false" />
+        <activity
+            android:name=".wednesday"
+            android:exported="false" />
+        <activity
+            android:name=".tuesday"
+            android:exported="false" />
+        <activity
+            android:name=".monday"
+            android:exported="false" />
+        <activity
+            android:name=".DaysOption"
+            android:exported="false" />
         <activity
             android:name=".WeightGain"
             android:exported="false" />
@@ -36,7 +61,7 @@
         </activity>
         <activity
             android:name=".Registration"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

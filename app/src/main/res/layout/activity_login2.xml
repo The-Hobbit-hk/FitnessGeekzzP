@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
-        android:text="Let's "
+        android:text="Let's Workout"
         android:textAlignment="center"
         android:textSize="30dp"
         android:textStyle="bold"
