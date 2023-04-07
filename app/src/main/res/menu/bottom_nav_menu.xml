@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/morning"
+        android:title="Morning"
+        android:icon="@drawable/ic_android_black_24dp"
+        />
+    <item
+        android:id="@+id/afternoon"
+        android:title="Afternoon" android:icon="@drawable/ic_android_black_24dp"
+        />
+    <item
+        android:id="@+id/night"
+        android:title="Night"
+        android:icon="@drawable/ic_android_black_24dp"
+
+        />
+</menu>

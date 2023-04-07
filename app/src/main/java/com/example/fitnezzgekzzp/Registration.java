@@ -149,8 +149,7 @@ public class Registration extends AppCompatActivity {
 
     void checkDataEntered() {
         if (isEmpty(Name)) {
-            Toast t = Toast.makeText(this, "You must enter Your Name to register!", Toast.LENGTH_SHORT);
-            t.show();
+            Name.setError("Enter you name");
         }
 
         if (isEmpty(Mobile)) {
@@ -163,6 +162,9 @@ public class Registration extends AppCompatActivity {
 
         if (isEmpty(Password)) {
             Password.setError("Enter your password.");
+        }
+        if (isEmpty(ConfirmPassword)) {
+            ConfirmPassword.setError("Enter your password.");
         }
 
 

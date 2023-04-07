@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="post_workout_recyclerview" type="id" />
+    <item name="pre_workout_recyclerview" type="id" />
+    <item name="expandable_list_view" type="id" />
+    <item name="diet_icon" type="id" />
+    <item name="diet_title" type="id" />
+    <item name="diet_description" type="id" />
+</resources>

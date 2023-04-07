@@ -6,7 +6,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -28,6 +30,8 @@ public class Login extends AppCompatActivity {
     Button Login;
     TextView Register;
     FirebaseAuth mAuth;
+    private SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +39,25 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login2);
         mAuth=FirebaseAuth.getInstance();
 
+
+
         email = findViewById(R.id.mail);
         password = findViewById(R.id.pswd);
         Login = findViewById(R.id.loginbtn);
         Register=findViewById(R.id.sgn);
+        // Get the SharedPreferences instance
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+
+// Check if the "loggedIn" key exists and its value is true
+        if (prefs.contains("loggedIn") && prefs.getBoolean("loggedIn", false)) {
+            // User is already logged in, start MainActivity and finish LoginActivity
+            Intent intent = new Intent(Login.this, Options.class);
+            startActivity(intent);
+            finish();
+        }
+
+
+
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,5 +96,12 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
-}
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            currentUser.reload();
+        }
+    }}

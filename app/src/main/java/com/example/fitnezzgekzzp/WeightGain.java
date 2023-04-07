@@ -17,10 +17,18 @@ public class WeightGain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weight_gain);
         workout=findViewById(R.id.workout);
+        diet=findViewById(R.id.diet);
         workout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(WeightGain.this,DaysOp.class);
+                startActivity(intent);
+            }
+        });
+        diet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WeightGain.this,dietwl.class);
                 startActivity(intent);
             }
         });
