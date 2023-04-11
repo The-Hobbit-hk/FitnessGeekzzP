@@ -2,7 +2,8 @@
     android:id="@+id/morning_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/lunch">
 
     <ExpandableListView
         android:id="@+id/diet_list1"

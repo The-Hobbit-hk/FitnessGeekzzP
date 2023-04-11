@@ -48,14 +48,14 @@ public class morning extends Fragment {
         mChildItems = new HashMap<>();
 
         // Add group titles
-        mGroupTitles.add("Pre-Workout Diet");
+        mGroupTitles.add("Early Morning");
         mGroupTitles.add("Post-Workout Diet");
 
         // Add child items for pre-workout diet
-        List<DietItem> preWorkoutItems = new ArrayList<>();
-        preWorkoutItems.add(new DietItem(R.drawable.ic_action_info, "Green Smoothie", "Blend spinach, banana, and almond milk."));
-        preWorkoutItems.add(new DietItem(R.drawable.ic_action_mobile ,"Greek Yogurt", "Top with fresh berries and honey."));
-        mChildItems.put(mGroupTitles.get(0), preWorkoutItems);
+        List<DietItem> earlymrngitems = new ArrayList<>();
+        earlymrngitems.add(new DietItem(R.drawable.ic_action_info, "1fruit of choice", "Grapefruit\n, Apples\n, Passion Fruit\n, Melons\n, Avocadoes\n"));
+        earlymrngitems.add(new DietItem(R.drawable.ic_action_mobile ,"3-4 mixed seeds", "Top with fresh berries and honey."));
+        mChildItems.put(mGroupTitles.get(0), earlymrngitems);
 
         // Add child items for post-workout diet
         List<DietItem> postWorkoutItems = new ArrayList<>();

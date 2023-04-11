@@ -17,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class DaysOp extends AppCompatActivity {
 
     private Spinner weekdaysSpinner;
-    Button btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,6 @@ public class DaysOp extends AppCompatActivity {
 
         // Get a reference to the spinner widget
         weekdaysSpinner = findViewById(R.id.weekdays_spinner);
-        btn1= findViewById(R.id.btn1);
 
         // Set up the spinner's OnItemSelectedListener
         weekdaysSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
