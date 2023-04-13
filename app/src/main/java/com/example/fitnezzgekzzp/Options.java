@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Path;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.VideoView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -19,6 +22,8 @@ public class Options extends AppCompatActivity {
     Button btnbmi, btnloss, btngain;
     BottomNavigationView bottomNavigation1;
 
+    private VideoView mVideoView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +33,17 @@ public class Options extends AppCompatActivity {
         btnloss = (Button) findViewById(R.id.btnloss);
         btngain = (Button) findViewById(R.id.btngain);
         bottomNavigation1=findViewById(R.id.bottom_nav);
+
+        mVideoView = (VideoView) findViewById(R.id.videoView);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.gym);
+        mVideoView.setVideoURI(uri);
+        mVideoView.start();
+        mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                mediaPlayer.setLooping(true);
+            }
+        });
 
         bottomNavigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
