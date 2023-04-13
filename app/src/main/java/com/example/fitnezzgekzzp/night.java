@@ -48,20 +48,23 @@ public class night extends Fragment {
         mChildItems = new HashMap<>();
 
         // Add group titles
-        mGroupTitles.add("Pre-Workout Diet");
-        mGroupTitles.add("Post-Workout Diet");
+        mGroupTitles.add("Before Dinner/Snacks");
+        mGroupTitles.add("Dinner Diet");
 
         // Add child items for pre-workout diet
-        List<DietItem> preWorkoutItems = new ArrayList<>();
-        preWorkoutItems.add(new DietItem(R.drawable.ic_action_info, "Green Smoothie", "Blend spinach, banana, and almond milk."));
-        preWorkoutItems.add(new DietItem(R.drawable.ic_action_mobile ,"Greek Yogurt", "Top with fresh berries and honey."));
-        mChildItems.put(mGroupTitles.get(0), preWorkoutItems);
+        List<DietItem> snacks = new ArrayList<>();
+        snacks.add(new DietItem(R.drawable.ic_action_info, "Any one snack", "1 fruit of your choice\n" +
+                "1 cup green tea/ 2 multigrain khakhras\n" +
+                "1 bowl sprout\n" +
+                "1 cup boiled corn or dal\n"));
+        mChildItems.put(mGroupTitles.get(0), snacks);
 
         // Add child items for post-workout diet
-        List<DietItem> postWorkoutItems = new ArrayList<>();
-        postWorkoutItems.add(new DietItem(R.drawable.ic_action_mail, "Protein Shake", "Mix protein powder, almond milk, and banana in a blender."));
-        postWorkoutItems.add(new DietItem(R.drawable.ic_home, "Grilled Chicken Salad", "Top mixed greens with grilled chicken, avocado, and balsamic vinaigrette."));
-        mChildItems.put(mGroupTitles.get(1), postWorkoutItems);
+        List<DietItem> DinnerItems = new ArrayList<>();
+        DinnerItems.add(new DietItem(R.drawable.ic_action_mail, "Have a proper meal", "1 bowl veg/chicken gravy + 1 bowl rice\n" +
+                "1 bowl vegetable dalia or upma with 1 bowl sambhar + 1 bowl salad\n" +
+                  "2 multigrain rotis + salad + 1 bowl low fat curd\n"));
+        mChildItems.put(mGroupTitles.get(1), DinnerItems);
 
         mExpandableListView = view.findViewById(R.id.diet_list2);
         mAdapter = new DietListAdapter(getContext(), mGroupTitles, mChildItems);
