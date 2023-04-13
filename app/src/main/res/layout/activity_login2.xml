@@ -9,6 +9,7 @@
     android:orientation="vertical">
 
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="120dp"
@@ -75,6 +76,7 @@
         android:drawablePadding="20dp"
         android:inputType="text"
         android:textSize="25dp"
+        android:background="@drawable/edittext_background"
         app:layout_constraintBottom_toTopOf="@+id/pswd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -90,6 +92,7 @@
         android:hint="Password:"
         android:drawableLeft="@drawable/ic_action_info"
         android:drawablePadding="20dp"
+        android:background="@drawable/edittext_background"
         android:inputType="textPassword"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/loginbtn"
@@ -103,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="36dp"
-        android:background="@color/black"
+        android:background="@color/Blue_Green"
         android:text="Login"
         android:textAlignment="center"
         android:textSize="20dp"

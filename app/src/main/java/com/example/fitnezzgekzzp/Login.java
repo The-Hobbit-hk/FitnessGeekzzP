@@ -45,17 +45,6 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.pswd);
         Login = findViewById(R.id.loginbtn);
         Register=findViewById(R.id.sgn);
-        // Get the SharedPreferences instance
-        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-
-// Check if the "loggedIn" key exists and its value is true
-        if (prefs.contains("loggedIn") && prefs.getBoolean("loggedIn", false)) {
-            // User is already logged in, start MainActivity and finish LoginActivity
-            Intent intent = new Intent(Login.this, Options.class);
-            startActivity(intent);
-            finish();
-        }
-
 
 
 

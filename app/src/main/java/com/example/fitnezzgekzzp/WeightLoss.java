@@ -13,6 +13,7 @@ public class WeightLoss extends AppCompatActivity {
     ImageView home;
     Button diet;
     Button workout;
+    ImageView logout;
 
 
 
@@ -24,6 +25,15 @@ public class WeightLoss extends AppCompatActivity {
         diet= findViewById(R.id.diet);
         workout=findViewById(R.id.workout);
         home=findViewById(R.id.home);
+        logout=findViewById(R.id.logout1);
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(WeightLoss.this,Login.class);
+                startActivity(intent1);
+            }
+        });
 
 
         home.setOnClickListener(new View.OnClickListener() {

@@ -32,8 +32,18 @@ public class Options extends AppCompatActivity {
         bottomNavigation1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.pro:
+                        // do nothing, we're already on the profile page
+                        return true;
+                    case R.id.set:
+                        Intent intent = new Intent(Options.this, Settings.class);
+                        startActivity(intent);
+                        return true;
+                    default:
+                        return false;
+                }
 
-                return false;
             }
         });
 
