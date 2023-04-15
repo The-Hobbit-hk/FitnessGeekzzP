@@ -48,11 +48,16 @@ public class Login extends AppCompatActivity {
 
 
 
+
+
+
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String Password = password.getText().toString();
                 String Email = email.getText().toString();
+
+
 
 
                 mAuth.signInWithEmailAndPassword(Email, Password)
@@ -85,12 +90,16 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            currentUser.reload();
+        if (currentUser != null) {
+            // user is already logged in, start main activity
+            Intent intent = new Intent(Login.this, Options.class);
+            startActivity(intent);
+            finish();
         }
-    }}
+    }
+    }

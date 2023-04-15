@@ -15,8 +15,32 @@
         android:theme="@style/Theme.Mycustomtheme"
         tools:targetApi="31">
         <activity
+            android:name=".dietwg"
+            android:exported="false" />
+        <activity
+            android:name=".Sat"
+            android:exported="false" />
+        <activity
+            android:name=".Fri"
+            android:exported="false" />
+        <activity
+            android:name=".Thur"
+            android:exported="false" />
+        <activity
+            android:name=".Wed"
+            android:exported="false" />
+        <activity
+            android:name=".Tue"
+            android:exported="false" />
+        <activity
+            android:name=".Mon"
+            android:exported="false" />
+        <activity
+            android:name=".DayOp"
+            android:exported="false" />
+        <activity
             android:name=".splash"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -64,8 +88,7 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".Registration"
             android:exported="false" />

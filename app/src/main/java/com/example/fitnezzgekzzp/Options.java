@@ -41,6 +41,9 @@ public class Options extends AppCompatActivity {
         mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
+                mVideoView.start();
+
+
                 mediaPlayer.setLooping(true);
             }
         });

@@ -8,12 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class WeightLoss extends AppCompatActivity {
 
     ImageView home;
     Button diet;
     Button workout;
     ImageView logout;
+
+    FirebaseAuth mauth;
 
 
 
@@ -27,13 +31,35 @@ public class WeightLoss extends AppCompatActivity {
         home=findViewById(R.id.home);
         logout=findViewById(R.id.logout1);
 
+        mauth = FirebaseAuth.getInstance();
+
+        logout = findViewById(R.id.logout1);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent1=new Intent(WeightLoss.this,Login.class);
-                startActivity(intent1);
+            public void onClick(View view) {
+                mauth.signOut();
+                Intent intent = new Intent(WeightLoss.this, Login.class);
+                startActivity(intent);
+                finish();
             }
         });
+
+        workout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(WeightLoss.this,DayOp.class);
+                startActivity(intent);
+            }
+        });
+        diet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(WeightLoss.this,dietwg.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
         home.setOnClickListener(new View.OnClickListener() {

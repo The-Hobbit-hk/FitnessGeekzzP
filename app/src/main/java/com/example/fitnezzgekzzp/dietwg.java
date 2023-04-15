@@ -9,32 +9,37 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class dietwl extends AppCompatActivity {
+public class dietwg extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    private Morn fragmentOne;
+    private Aftn fragmentTwo;
+    private Eve fragmentThree;
+    private Fragment activeFragment;
 
-    private morning f1;
-    private afternoon f2;
-    private night f3;
-    private Fragment active;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dietwl);
+        setContentView(R.layout.activity_dietwg);
 
-        f1= new morning();
-        f2=new afternoon();
-        f3 = new night();
 
-        active =f1;
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,f1).commit();
+        fragmentOne = new Morn();
+        fragmentTwo = new Aftn();
+        fragmentThree = new Eve();
+
+        // set default fragment
+        activeFragment = fragmentOne;
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, fragmentOne).commit();
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+                        bottomNavigationView.setSelectedItemId(R.id.fragment_container);
                         switch (item.getItemId()) {
                             case R.id.morning:
                                 getSupportFragmentManager().beginTransaction()
