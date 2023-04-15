@@ -32,33 +32,22 @@ public class Login extends AppCompatActivity {
     FirebaseAuth mAuth;
     private SharedPreferences sharedPreferences;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
         mAuth=FirebaseAuth.getInstance();
 
-
-
         email = findViewById(R.id.mail);
         password = findViewById(R.id.pswd);
         Login = findViewById(R.id.loginbtn);
         Register=findViewById(R.id.sgn);
-
-
-
-
-
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String Password = password.getText().toString();
                 String Email = email.getText().toString();
-
-
-
 
                 mAuth.signInWithEmailAndPassword(Email, Password)
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
@@ -67,39 +56,38 @@ public class Login extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     Intent intent = new Intent(com.example.fitnezzgekzzp.Login.this,Options.class);
                                     startActivity(intent);
-
                                     FirebaseUser user = mAuth.getCurrentUser();
-
                                 } else {
-
                                     Toast.makeText(Login.this, "Incorrect Email id or Password",
                                             Toast.LENGTH_SHORT).show();
-
                                 }
                             }
                         });
             }
-
         });
 
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent= new Intent(com.example.fitnezzgekzzp.Login.this,Registration.class);
+                Intent intent= new Intent(Login.this, Registration.class);
                 startActivity(intent);
             }
         });
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            // user is already logged in, start main activity
+        if (currentUser != null && !isTaskRoot()) {
             Intent intent = new Intent(Login.this, Options.class);
             startActivity(intent);
             finish();
         }
     }
+
+    public boolean isTaskRoot() {
+        return (getIntent().getFlags() & Intent.FLAG_ACTIVITY_TASK_ON_HOME) == Intent.FLAG_ACTIVITY_TASK_ON_HOME;
     }
+}

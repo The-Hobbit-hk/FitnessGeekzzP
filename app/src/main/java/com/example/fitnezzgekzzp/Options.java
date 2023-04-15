@@ -53,11 +53,16 @@ public class Options extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.pro:
-                        // do nothing, we're already on the profile page
+                       Intent intent1= new Intent(Options.this,Profile.class);
+                       startActivity(intent1);
                         return true;
                     case R.id.set:
                         Intent intent = new Intent(Options.this, Settings.class);
                         startActivity(intent);
+                        return true;
+                    case R.id.home:
+                        // close the current activity and go back to home
+                        finish();
                         return true;
                     default:
                         return false;
