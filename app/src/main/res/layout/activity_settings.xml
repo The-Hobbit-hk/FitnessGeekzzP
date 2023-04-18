@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/Baby_Blue">
 
     <!-- Settings Section -->
     <LinearLayout
@@ -16,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Settings"
+            android:textStyle="bold"
             android:textSize="24sp"/>
 
         <Switch
@@ -45,18 +47,19 @@
             android:layout_height="wrap_content"
             android:id="@+id/about_us"
             android:text="About us"
+            android:textStyle="bold"
             android:textSize="18sp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="This app helps you stay organized and productive."/>
+            android:text="This app helps you Follow the diet and daily workout Designed according to your weight."/>
 
         <Button
             android:id="@+id/about_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Learn More"/>
+            android:text="Learn More" />
 
     </LinearLayout>
 

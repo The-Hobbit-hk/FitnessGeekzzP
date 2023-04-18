@@ -11,4 +11,8 @@
     <color name="Blue_Green">#75E6DA</color>
     <color name="Blue_Grotto">#189AB4</color>
     <color name="Navy_Blue">#05445E</color>
+    <color name="gray">#3C486B</color>
+    <color name="light_gray">#F0F0F0</color>
+
+
 </resources>

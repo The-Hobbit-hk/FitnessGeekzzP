@@ -76,7 +76,7 @@ public class Settings extends AppCompatActivity {
     private void showAboutUsAlertBox() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("About Us");
-        builder.setMessage("This app helps you stay organized and productive.");
+        builder.setMessage("This app helps you Follow the diet and daily workout Designed according to your weight");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -87,7 +87,7 @@ public class Settings extends AppCompatActivity {
     }
 
     private void openLearnMorePage() {
-        String url = "https://www.example.com";
+        String url = "https://www.FitnezGeeks.com";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);

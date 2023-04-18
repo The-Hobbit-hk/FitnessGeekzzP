@@ -35,6 +35,7 @@ public class Profile extends AppCompatActivity {
     private TextView mMobileText;
     private ImageView mProfileImage;
     private Button trainer;
+    private Button logout;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mUsersRef;
@@ -57,12 +58,22 @@ public class Profile extends AppCompatActivity {
         mMobileText = findViewById(R.id.mobile_text);
         mProfileImage = findViewById(R.id.profile_image);
         trainer=findViewById(R.id.trainer_button);
+        logout=findViewById(R.id.logout2);
 
         trainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1=new Intent(Profile.this,Trainer.class);
                 startActivity(intent1);
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(Profile.this, Login.class);
+                startActivity(intent);
+                finish();
             }
         });
         mProfileImage.setOnClickListener(new View.OnClickListener() {

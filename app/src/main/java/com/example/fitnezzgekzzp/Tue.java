@@ -18,7 +18,7 @@ public class Tue extends AppCompatActivity {
 
         webView = findViewById(R.id.web1);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://musclewiki.com/exercises/male/chest");
+        webView.loadUrl("https://musclewiki.com/bodyweight/male/lats");
     }
 
     @Override
